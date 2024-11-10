@@ -1,15 +1,10 @@
 import curses
 import map
-import player
+import obj
 
 def main(stdscr):
     stdscr.clear()
     a = map.Room()
-    a.modify(5, 5, "Box")
-    p = player.Player()
-    a[p.y][p.x] = p.s
-    ttime = 0
-    block = ["###", " ##", " # ", "## ", " B "]
     stdscr.addstr(0, 0, str(a))
     stdscr.refresh()
     while True:
